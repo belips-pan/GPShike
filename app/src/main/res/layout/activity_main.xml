@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- Exit Button -->
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EXIT"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:background="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_margin="8dp"/>
+    <!-- Add this near your exit button -->
+    <Button
+        android:id="@+id/btnClearCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear Caches"
+        android:layout_margin="8dp"
+        android:backgroundTint="#FF9800"
+        android:textColor="@android:color/white"/>
+
+    <!-- Main Button Grid - Simplified Structure -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:padding="8dp">
+
+        <!-- Row 1 -->
+        <ImageButton
+            android:id="@+id/btnDatum"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im1"
+            android:contentDescription="Datum"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <ImageButton
+            android:id="@+id/btnMaps"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im2"
+            android:contentDescription="Maps"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <!-- Row 2 -->
+        <ImageButton
+            android:id="@+id/btnWaypoints"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im3"
+            android:contentDescription="Waypoints"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <ImageButton
+            android:id="@+id/btnTracks"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im4"
+            android:contentDescription="Tracks"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <!-- Row 3 -->
+        <ImageButton
+            android:id="@+id/btnImport"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im5"
+            android:contentDescription="Import"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <ImageButton
+            android:id="@+id/btnExport"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im6"
+            android:contentDescription="Export"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <!-- Row 4 -->
+        <ImageButton
+            android:id="@+id/btnSatellites"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im7"
+            android:contentDescription="Satellites"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <ImageButton
+            android:id="@+id/btnTranslate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im8"
+            android:contentDescription="Translate"
+            android:background="?android:attr/selectableItemBackground"/>
+    </GridLayout>
+</LinearLayout>

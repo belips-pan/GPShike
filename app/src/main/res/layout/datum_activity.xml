@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Ellipsoid Parameters Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ellipsoid Parameters"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ellipsoid Name:"/>
+
+        <EditText
+            android:id="@+id/etEllipsoidName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. GRS80"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Semi-major axis (a) in meters:"/>
+
+        <EditText
+            android:id="@+id/etSemiMajorAxis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 6378137"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inverse flattening (1/f):"/>
+
+        <EditText
+            android:id="@+id/etInverseFlattening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 298.257222101"
+            android:inputType="numberDecimal"/>
+
+        <!-- 7-Parameter Transformation Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7-Parameter Transformation (WGS84 to Target)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X Translation (ΔX in meters):"/>
+
+        <EditText
+            android:id="@+id/etXTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 0.0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Y Translation (ΔY in meters):"/>
+
+        <EditText
+            android:id="@+id/etYTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 0.0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Z Translation (ΔZ in meters):"/>
+
+        <EditText
+            android:id="@+id/etZTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 0.0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X Rotation (εX in arc-seconds):"/>
+
+        <EditText
+            android:id="@+id/etXRotation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 0.0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Y Rotation (εY in arc-seconds):"/>
+
+        <EditText
+            android:id="@+id/etYRotation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 0.0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Z Rotation (εZ in arc-seconds):"/>
+
+        <EditText
+            android:id="@+id/etZRotation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 0.0"
+            android:inputType="numberDecimal|numberSigned" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scale Factor (ppm):"/>
+
+        <EditText
+            android:id="@+id/etScaleFactor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 0.0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <!-- Projection Parameters Section -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Projection Parameters"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Projection Center Latitude (φ0 in degrees):"/>
+
+        <EditText
+            android:id="@+id/etProjectionLat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 37.0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Projection Center Longitude (λ0 in degrees):"/>
+
+        <EditText
+            android:id="@+id/etProjectionLon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 23.0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Projection Scale Factor:"/>
+
+        <EditText
+            android:id="@+id/etProjectionScale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 1.0"
+            android:inputType="numberDecimal"/>
+
+        <!-- Activation Checkbox -->
+        <CheckBox
+            android:id="@+id/cbUseForTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use these parameters in TranslateActivity"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Parameters"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_margin="6dp"/>
+    </LinearLayout>
+</ScrollView>

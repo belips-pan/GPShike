@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Widget styles (MaterialComponents) -->
+    <style name="Widget.GPShike.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/TextAppearance.GPShike.Button</item>
+        <item name="backgroundTint">@color/purple_500</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Legacy AppCompat fallbacks -->
+    <style name="LegacyButton" parent="Widget.AppCompat.Button">
+        <!-- Use MaterialComponents text appearance instead -->
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+    </style>
+</resources>
