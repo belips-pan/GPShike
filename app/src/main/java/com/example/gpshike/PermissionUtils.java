@@ -1,3 +1,7 @@
+// **************************
+// * Panagiotis Beligiannis *
+// **************************
+
 // app/src/main/java/com/example/gpshike/PermissionUtils.java
 package com.example.gpshike;
 
