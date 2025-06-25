@@ -1,3 +1,7 @@
+// **************************
+// * Panagiotis Beligiannis *
+// **************************
+
 package com.example.gpshike;
 
 import android.Manifest;
