@@ -1,3 +1,8 @@
+// **************************
+// * Panagiotis Beligiannis *
+// **************************
+
+
 package com.example.gpshike;
 
 import android.app.AlertDialog;
