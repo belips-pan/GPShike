@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPShike Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .permissions {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+        .links {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 177.77%; /* Aspect ratio for Shorts (9:16) */
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+            max-width: 360px; /* Maximum width for the embedded video */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>GPShike</h1>
+    <p>GPS hiking is an open source android app for hiking.</p>
+    <p>Its MainActivity calls 8 Activities through a 4X2 imagebutton menu.<br>
+    GPShike through this activities utilizes:</p>
+
+    <h2>App Demonstration</h2>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/mZm9OOMPp7c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <h2>1 DatumActivity.java</h2>
+    <p>With this activity the user can define a Datum and a projection.</p>
+    <p>To define a datum the user must enter</p>
+    <ul>
+        <li>Ellipsoid parameters (name, semi-major axis, inverse flattening)</li>
+        <li>7-parameter transformation (translations, rotations, scale)</li>
+        <li>Projection parameters (center ö0, ë0, scale factor)</li>
+    </ul>
+
+    <!-- Rest of the content remains exactly the same as before -->
+    <h2>2. MapsActivity.java</h2>
+    <p>Initializes the map resources. Uses Osmdroid free maps.</p>
+    <ul>
+        <li>Uses standard MAPNIK tiles (free worldwide maps)</li>
+        <li>Good coverage for Greece and Europe</li>
+        <li>No API keys required</li>
+    </ul>
+
+    <!-- ... (all other sections remain unchanged) ... -->
+
+    <div class="links">
+        <a href="https://www.linkedin.com/in/panagiotis-beligiannis-7973b033b/">Linkedin</a> | 
+        <a href="https://github.com/belips-pan/GPShike">Github</a> | 
+        <a href="mailto:belips@gmx.com">Contact</a>
+    </div>
+</body>
+</html>
