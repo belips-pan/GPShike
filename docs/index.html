@@ -92,8 +92,220 @@
         <li>Good coverage for Greece and Europe</li>
         <li>No API keys required</li>
     </ul>
+<h3>Basic Map Controls:</h3>
+    <ul>
+        <li>Zoom in/out buttons</li>
+        <li>"My Location" button</li>
+        <li>Multi-touch gestures supported</li>
+    </ul>
 
-    <!-- ... (all other sections remain unchanged) ... -->
+    <h3>Functionality for Other Activities:</h3>
+    <ul>
+        <li>Methods to add waypoints (addWaypointMarker)</li>
+        <li>Methods to draw tracks (drawTrack)</li>
+        <li>Methods to center map (centerMapOnPoint)</li>
+    </ul>
+
+    <div class="permissions">
+        <h3>Permissions Handling:</h3>
+        <ul>
+            <li>Properly requests location permissions</li>
+            <li>Gracefully handles permission denial</li>
+        </ul>
+    </div>
+
+    <h3>Performance Considerations:</h3>
+    <ul>
+        <li>Map caching for offline use</li>
+        <li>Efficient overlay management</li>
+    </ul>
+
+    <h2>3. WaypointsActivity.java</h2>
+    <p>Record waypoints when managing map background.</p>
+    <p>Waypoints are recorded in lat, lon coordinates.</p>
+
+    <h3>Integrated Map View:</h3>
+    <ul>
+        <li>Shows all waypoints as markers</li>
+        <li>Real-time updates when recording/editing</li>
+        <li>Zoom controls (+/- buttons)</li>
+        <li>Center-on-location button</li>
+    </ul>
+
+    <h3>Waypoint Recording:</h3>
+    <ul>
+        <li>5-character uppercase ID validation</li>
+        <li>Automatic numbering</li>
+        <li>GPS coordinates capture</li>
+        <li>Timestamp recording</li>
+    </ul>
+
+    <h3>Editing Interface:</h3>
+    <ul>
+        <li>Full list view of all waypoints</li>
+        <li>Add new waypoints</li>
+        <li>Delete all functionality</li>
+        <li>Automatic map refresh after editing</li>
+    </ul>
+
+    <h3>File Management:</h3>
+    <ul>
+        <li>CSV format with all fields</li>
+        <li>Persistent storage in app directory</li>
+        <li>Automatic loading on startup</li>
+    </ul>
+
+    <h3>User Experience:</h3>
+    <ul>
+        <li>Clear control layout</li>
+        <li>Immediate visual feedback</li>
+        <li>Error handling and toasts</li>
+        <li>Smooth transitions between views</li>
+    </ul>
+
+    <h2>4. TracksActivity.java</h2>
+    <p>Trackpoints are recorded also in lat long csv files.</p>
+
+    <h3>Track Recording:</h3>
+    <ul>
+        <li>Start/Stop recording button</li>
+        <li>5-second interval recording</li>
+        <li>5-character track ID validation</li>
+        <li>CSV format with all required fields</li>
+        <li>Automatic numbering of points</li>
+    </ul>
+
+    <h3>Map Visualization:</h3>
+    <ul>
+        <li>Real-time track drawing</li>
+        <li>Different colors for different tracks</li>
+        <li>Auto-pan when points go off-screen</li>
+        <li>Zoom controls (+/- buttons)</li>
+        <li>Center-on-location button</li>
+    </ul>
+
+    <h3>Editing Interface:</h3>
+    <ul>
+        <li>Full list view of all track points</li>
+        <li>Add new points</li>
+        <li>Delete all functionality</li>
+        <li>Automatic map refresh after editing</li>
+    </ul>
+
+    <h3>File Management:</h3>
+    <ul>
+        <li>Persistent storage in app directory</li>
+        <li>Automatic loading on startup</li>
+        <li>Proper error handling</li>
+    </ul>
+
+    <h3>User Experience:</h3>
+    <ul>
+        <li>Clear status indicators</li>
+        <li>Immediate visual feedback</li>
+        <li>Smooth transitions between views</li>
+        <li>Proper handling of GPS signal loss</li>
+    </ul>
+
+    <h2>5. ImportActivity.java</h2>
+
+    <h3>Import Functionality:</h3>
+    <ul>
+        <li>Uses Android's file picker to select CSV files</li>
+        <li>Validates file selection</li>
+        <li>Copies selected file to either waypoints_cache.txt or tracks_cache.txt</li>
+        <li>Provides status feedback</li>
+    </ul>
+
+    <h3>User Interface:</h3>
+    <ul>
+        <li>Simple three-button layout</li>
+        <li>Status text view for feedback</li>
+        <li>Consistent design with other activities</li>
+        <li>Clear button labels</li>
+    </ul>
+
+    <h3>File Handling:</h3>
+    <ul>
+        <li>Uses Apache Commons IO for reliable file operations</li>
+        <li>Proper error handling</li>
+        <li>Supports both waypoints and tracks</li>
+        <li>Maintains original file formats</li>
+    </ul>
+
+    <h2>6. ExportActivity.java</h2>
+
+    <h3>Export Functionality:</h3>
+    <ul>
+        <li>Uses Android's share dialog to export files</li>
+        <li>Checks if data exists before exporting</li>
+        <li>Uses FileProvider for secure file sharing</li>
+        <li>Provides status feedback</li>
+    </ul>
+
+    <h2>7. SatelitesActivity.java</h2>
+
+    <h3>Sky Plot Visualization:</h3>
+    <ul>
+        <li>Uses radar chart to display satellite positions</li>
+        <li>Center of chart represents zenith (90° elevation)</li>
+        <li>Outer edge represents horizon (0° elevation)</li>
+        <li>Directions marked (N, NE, E, SE, S, SW, W, NW)</li>
+    </ul>
+
+    <h3>Satellite Grouping:</h3>
+    <ul>
+        <li>Different colors for each constellation (GPS, GLONASS, Galileo, BeiDou)</li>
+        <li>Shows PRN numbers in tooltips</li>
+    </ul>
+
+    <h3>Information Display:</h3>
+    <ul>
+        <li>Shows satellite count per constellation</li>
+        <li>Clear visualization of satellite distribution</li>
+    </ul>
+
+    <h3>User Interface:</h3>
+    <ul>
+        <li>Simple layout with just a back button</li>
+        <li>Full-screen chart for maximum visibility</li>
+        <li>Clean, professional appearance</li>
+    </ul>
+
+    <h2>8. TranslateActivity.java</h2>
+
+    <h3>File Selection:</h3>
+    <ul>
+        <li>Uses Android's file picker to select input CSV files</li>
+        <li>Handles both WGS84 (ö,ë,h) and projected (E,N,H) outputs</li>
+    </ul>
+
+    <h3>Coordinate Transformations:</h3>
+    <ul>
+        <li>Converts WGS84 to Cartesian (XYZ) using ellipsoid parameters</li>
+        <li>Optionally projects to Mercator (ENH) if projection defined</li>
+        <li>Handles 7-parameter datum transformations</li>
+    </ul>
+
+    <h3>Output Files:</h3>
+    <ul>
+        <li>Creates .XYZ file with Cartesian coordinates</li>
+        <li>Creates .ENH file with projected coordinates (if projection defined)</li>
+        <li>Preserves original point IDs and descriptions</li>
+    </ul>
+
+    <h3>Parameter Handling:</h3>
+    <ul>
+        <li>Loads ellipsoid and projection parameters</li>
+        <li>Validates required parameters before transformation</li>
+    </ul>
+
+    <h3>User Interface:</h3>
+    <ul>
+        <li>Simple three-button interface</li>
+        <li>Status feedback during operations</li>
+        <li>Error handling and warnings</li>
+    </ul>
 
     <div class="links">
         <a href="https://www.linkedin.com/in/panagiotis-beligiannis-7973b033b/">Linkedin</a> | 
